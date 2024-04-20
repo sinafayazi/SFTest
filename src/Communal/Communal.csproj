@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <PackageId>Communal</PackageId>
+        <Version>0.1.0</Version>
+        <Description>
+            This class library consists classes that are common among the micro-services
+        </Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Hashids.net" Version="1.7.0" />
+        <PackageReference Include="libphonenumber-csharp" Version="8.13.34" />
+        <PackageReference Include="MassTransit" Version="8.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+        <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" Version="8.0.3" />
+        <PackageReference Include="StackExchange.Redis" Version="2.7.33" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Api\Infrastructure\" />
+      <Folder Include="Application\Configurations\" />
+    </ItemGroup>
+
+</Project>

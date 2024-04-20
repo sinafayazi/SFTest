@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <PackageId>Contracts</PackageId>
+        <PackageVersion>0.1.0</PackageVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="ServiceBus\Rpc\User\" />
+    </ItemGroup>
+
+</Project>
