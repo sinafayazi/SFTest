@@ -2,7 +2,7 @@ using System.Text.Json.Serialization;
 using StoreService.Api.Extensions.DependencyInjection;
 using StoreService.Persistence;
 using Microsoft.OpenApi.Models;
-using StoreService.Persistence.Extensions;
+using StoreService.Persistence.Seeding;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +12,6 @@ builder.Services.AddServices();
 builder.Services.AddConfiguredMediatR();
 
 builder.Services.AddConfiguredHealthChecks();
-builder.Services.AddSingleton<MemoryCacheInjection>();
 builder.Services.AddMemoryCache();
 
 builder.Services.AddControllers().AddJsonOptions(opts =>
@@ -33,6 +32,7 @@ builder.Services.AddSwaggerGen(c =>
 var app = builder.Build();
 
 app.RunMigrations();
+app.Seed();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

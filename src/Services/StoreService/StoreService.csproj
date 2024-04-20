@@ -39,8 +39,8 @@
       <Folder Include="Application\Configurations\" />
       <Folder Include="Application\Constants\" />
       <Folder Include="Application\Infrastructure\" />
+      <Folder Include="Persistence\Extensions\" />
       <Folder Include="Persistence\Migrations\" />
-      <Folder Include="Persistence\Seeding\Seeds\" />
       <Folder Include="ServiceBus\Consumers\" />
     </ItemGroup>
 
