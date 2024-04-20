@@ -1,5 +1,7 @@
 ﻿using StoreService.Domain.Users;
 using Microsoft.EntityFrameworkCore;
+using StoreService.Domain.Orders;
+using StoreService.Domain.Products;
 
 namespace StoreService.Persistence
 {
@@ -8,6 +10,8 @@ namespace StoreService.Persistence
         #region DbSets
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         #endregion
 

@@ -13,6 +13,7 @@ builder.Services.AddConfiguredMediatR();
 
 builder.Services.AddConfiguredHealthChecks();
 builder.Services.AddSingleton<MemoryCacheInjection>();
+builder.Services.AddMemoryCache();
 
 builder.Services.AddControllers().AddJsonOptions(opts =>
 {
