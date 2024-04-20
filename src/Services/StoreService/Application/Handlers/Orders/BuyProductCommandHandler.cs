@@ -49,9 +49,9 @@ namespace StoreService.Application.Handlers.Orders
                 return new OperationResult(OperationResultStatus.Unprocessable, value: ProductErrors.ProductOutOfStockError);
             
             User user = null;
-            if (_memoryCache.TryGetValue(RedisKeys.ProductKey(request.ProductId), out User userCache ))
+            if (_memoryCache.TryGetValue(RedisKeys.UserKey(request.BuyerId), out User userCache ))
             {
-                product = prod;
+                user = userCache;
             }
             else
             {

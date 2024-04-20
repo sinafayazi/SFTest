@@ -19,9 +19,9 @@ namespace StoreService.Api.Controllers
         }
 
         // Detail
-        [HttpGet(Routes.Product + "{id}")]
+        [HttpGet(Routes.Store + "{id}")]
         [GetProductResultFilter]
-        public async Task<IActionResult> GetUserDetail([FromRoute] int id)
+        public async Task<IActionResult> GetProductDetail([FromRoute] int id)
         {
 
             // Operation
@@ -33,14 +33,15 @@ namespace StoreService.Api.Controllers
             return this.ReturnResponse(operation);
         }
 
-        [HttpPatch(Routes.Product + "{id}")]
-        [UpdateIncreaseProductInventoryCountResultFilter]
+        [HttpPatch(Routes.Store + "{id}")]
+        [UpdateProductResultFilter]
         public async Task<IActionResult> BuyProduct([FromRoute] int id,[FromBody] BuyProductRequest request)
         {
             // Operation
          var operation = await _mediator.Send(new BuyProductCommand
             {
-                BuyerId = id,
+                BuyerId = request.BuyerId,
+                ProductId = id
             });
 
             return this.ReturnResponse(operation);

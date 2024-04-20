@@ -37,7 +37,7 @@ namespace StoreService.Api.Controllers
        
 
         [HttpPatch(Routes.Product + "{id}")]
-        [UpdateIncreaseProductInventoryCountResultFilter]
+        [UpdateProductResultFilter]
         public async Task<IActionResult> UpdateIncreaseProductInventoryCount([FromRoute] int id, [FromBody] UpdateIncreaseProductInventoryCountRequest request)
         {
             // Operation

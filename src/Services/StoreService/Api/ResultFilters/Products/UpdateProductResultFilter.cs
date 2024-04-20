@@ -4,7 +4,7 @@ using StoreService.Domain.Products;
 
 namespace StoreService.Api.ResultFilters.Products
 {
-    public class UpdateIncreaseProductInventoryCountResultFilter : ResultFilterAttribute
+    public class UpdateProductResultFilter : ResultFilterAttribute
     {
         public override async Task OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next)
         {
